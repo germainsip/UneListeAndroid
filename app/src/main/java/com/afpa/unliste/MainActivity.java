@@ -5,6 +5,9 @@ import android.widget.ListView;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -20,14 +23,13 @@ public class MainActivity extends AppCompatActivity {
         UserAcount germain = new UserAcount("Germain", "user");
         UserAcount cedric = new UserAcount("Cédric", "guest", false);
 
-        UserAcount[] users = new UserAcount[]{francois, germain, cedric};
+       List<UserAcount> listCli = new ArrayList<UserAcount>();
+       listCli.add(francois);
+       listCli.add(germain);
+       listCli.add(cedric);
 
-        ArrayAdapter<UserAcount> arrayAdapter = new ArrayAdapter<UserAcount>(this, android.R.layout.simple_list_item_checked, users);
+        listView.setAdapter(new CustomListAdpater(listCli, this));
 
-        listView.setAdapter(arrayAdapter);
-        for (int i = 0; i < users.length; i++) {
-            listView.setItemChecked(i, users[i].isActive());
-        }
 
 
     }
