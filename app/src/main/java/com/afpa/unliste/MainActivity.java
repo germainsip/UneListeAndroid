@@ -30,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
        listCli.add(cedric);
        listCli.add(manu);
 
+
+       // utilisation du customListAdapter sur listView
         listView.setAdapter(new CustomListAdpater(listCli, this));
 
 
