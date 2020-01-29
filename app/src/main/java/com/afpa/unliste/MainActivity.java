@@ -22,11 +22,13 @@ public class MainActivity extends AppCompatActivity {
         UserAcount francois = new UserAcount("François", "admin");
         UserAcount germain = new UserAcount("Germain", "user");
         UserAcount cedric = new UserAcount("Cédric", "guest", false);
+        UserAcount manu = new UserAcount("Manu","guest");
 
        List<UserAcount> listCli = new ArrayList<UserAcount>();
        listCli.add(francois);
        listCli.add(germain);
        listCli.add(cedric);
+       listCli.add(manu);
 
         listView.setAdapter(new CustomListAdpater(listCli, this));
 
