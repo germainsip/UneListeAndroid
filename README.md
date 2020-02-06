@@ -1,4 +1,4 @@
 
 # Une Liste Android
-Liste avec CustomAdapter
+avec le modèle de base d'android
 
